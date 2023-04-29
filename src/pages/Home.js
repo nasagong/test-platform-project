@@ -1,49 +1,63 @@
 import styled from "styled-components";
-import {Link} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Body = styled.div`
   width: 300px;
   height: 100vh;
   margin: auto;
   overflow: hidden;
+  text-align: center;
 `;
 
 const Title = styled.div`
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-align: center;
   margin-top: 3rem;
 `;
 
-const TestContainer = styled.div`
+const Subtitle = styled.div`
+  margin-top:2rem;
+`
+
+const Image = styled.div`
+  background-color: grey;
+  margin:3rem auto 0rem auto;
+  width:200px;
+  height:200px;
+`
+const BtnContainer = styled.div`
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-const Test = styled.div`
-  border-radius: 1rem;
+const Btn = styled.button`
+  border-radius: 10rem;
   margin-top: 2rem;
-  padding: 2rem 8rem;
-  background-color: grey;
+  padding: 1rem 7rem;
+  background-color: #D94F71;
   transition: background-color 0.5s ease-in-out;
   color: white;
   font-size: 1.5rem;
   &:hover {
-    background-color: #E2E2E2;
+    background-color: #E5A9B4;
   }
 `;
 
 const Home = () => {
+  const navigate = useNavigate();
+  const onClick = () => {
+    navigate('/test');
+  }
   return (
     <Body>
-      <Title>Test something</Title>
-      <TestContainer>
-        <Test><Link to="/test">TEST</Link></Test>
-        <Test>TEST</Test>
-        <Test>TEST</Test>
-        <Test>TEST</Test>
-      </TestContainer>
+      <Title>Title</Title>
+      <Subtitle> lorem ipsum is </Subtitle>
+      <Image>IMAGE</Image>
+      <BtnContainer>
+        <Btn onClick={onClick}>TEST</Btn>
+      </BtnContainer>
     </Body>
   );
 };

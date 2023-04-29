@@ -1,7 +1,7 @@
 const Result = () => {
     return(
         <div>
-            <h1>TEST PAGE</h1>
+            <h1>RESULT PAGE</h1>
         </div>
     )
 }
