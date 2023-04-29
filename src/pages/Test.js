@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const Option = styled.button`
   width: 20rem;
@@ -55,6 +56,7 @@ const questions = [
 ];
 
 const Test = () => {
+  const navigate = useNavigate();
   const [slider, setSlider] = React.useState(null);
   const [selectedOptions, setSelectedOptions] = React.useState({});
   const handleOptionSelect = (questionId, option) => {
@@ -62,7 +64,9 @@ const Test = () => {
       ...selectedOptions,
       [questionId]: option,
     });
-    slider.slickNext(); // Move to the next slide
+    if(questionId===4){
+      navigate('/result');
+    }else {slider.slickNext()}; // Move to the next slide
   };
 
   const settings = {
