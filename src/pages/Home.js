@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {Link} from 'react-router-dom';
 
 const Body = styled.div`
-  width: 800px;
+  width: 300px;
   height: 100vh;
   margin: auto;
   overflow: hidden;
@@ -22,8 +22,7 @@ const TestContainer = styled.div`
 `;
 
 const Test = styled.div`
-  border: solid 3px beige;
-  border-radius: 5px;
+  border-radius: 1rem;
   margin-top: 2rem;
   padding: 2rem 8rem;
   background-color: grey;
@@ -31,7 +30,7 @@ const Test = styled.div`
   color: white;
   font-size: 1.5rem;
   &:hover {
-    background-color: beige;
+    background-color: #E2E2E2;
   }
 `;
 

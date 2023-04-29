@@ -4,9 +4,10 @@ import "slick-carousel/slick/slick.css";
 import styled from "styled-components";
 
 const Option = styled.button`
-  width: 190px;
-  height: 1.5rem;
-  margin: auto;
+  width: 20rem;
+  height: 2.5rem;
+  font-size:1.7rem;
+  margin: 0.5rem auto 0rem auto;
   border-radius: 10px;
   display: block;
 `;
@@ -18,7 +19,6 @@ const Title = styled.h1`
   text-align: center;
 `;
 const Body = styled.div`
-  width: 15rem;
   height: 100vh;
   margin: auto;
   overflow: hidden;
@@ -29,12 +29,14 @@ const questions = [
   {
     id: 1,
     text: "Question 1",
+    question: "lorem ipsum is ",
     options: ["AAAAA", "BBBBB"],
     selected: "",
   },
   {
     id: 2,
     text: "Question 2",
+    question: "lorem ipsum is ",
     options: ["AAAAA", "BBBBB"],
     selected: "",
   },
