@@ -36,7 +36,7 @@ const Btn = styled.button`
   border-radius: 10rem;
   margin-top: 2rem;
   padding: 1rem 7rem;
-  background-color: #D94F71;
+  background-color: #ED0086;
   transition: background-color 0.5s ease-in-out;
   color: white;
   font-size: 1.5rem;
