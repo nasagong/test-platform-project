@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import styled from "styled-components";
@@ -18,6 +18,7 @@ const Option = styled.button`
   margin: 1rem auto 0rem auto;
   background-color: #f8f9fa;
   border-radius: 1.5rem;
+  border: none;
   display: block;
 `;
 
@@ -43,7 +44,7 @@ const BtnContainer = styled.div`
 const Body = styled.div`
   //너비 반응형으로 해야
   @media (max-width: 768px) {
-    width: 400px;
+    width: 500px;
   }
   width: 32rem;
   height: 100vh;
@@ -71,14 +72,14 @@ const questions = [
   },
   {
     id: 3,
-    text: "Q3",
+    text: "Q3.",
     question: "Estamos en el cuarto./nQue estamos haciendo?",
     options: ["Netflix", "Comiendo", "Hablando sobre un tema interesante"],
     selected: "",
   },
   {
     id: 4,
-    text: "Q4",
+    text: "Q4.",
     question: "lorem ipsum is ",
     options: ["AAAAA", "BBBBB"],
     selected: "",
@@ -87,13 +88,13 @@ const questions = [
 
 const Test = () => {
   const navigate = useNavigate();
-  const [slider, setSlider] = React.useState(null);
-  const [selectedOptions, setSelectedOptions] = React.useState({});
-  const [slideIndex, setSlideIndex] = React.useState(0);
+  const [slider, setSlider] = useState(null);
+  const [selectedOptions, setSelectedOptions] = useState({});
+  const [slideIndex, setSlideIndex] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (slideIndex === 0) {
-     setSlideIndex(1);
+      setSlideIndex(1);
     }
   }, [slideIndex]);
 

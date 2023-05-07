@@ -53,7 +53,7 @@ const Home = () => {
   return (
     <Body>
       <Title>Title</Title>
-      <Subtitle> lorem ipsum is </Subtitle>
+      <Subtitle> THIS IS TEST TEXT </Subtitle>
       <Image>IMAGE</Image>
       <BtnContainer>
         <Btn onClick={onClick}>TEST</Btn>
