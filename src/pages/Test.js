@@ -73,15 +73,80 @@ const questions = [
   {
     id: 3,
     text: "Q3.",
-    question: "Estamos en el cuarto./nQue estamos haciendo?",
-    options: ["Netflix", "Comiendo", "Hablando sobre un tema interesante"],
+    question: "Estamos en el cuarto.\nQue estamos haciendo?",
+    options: ["Netflix", "Hablando sobre un tema interesante"],
     selected: "",
   },
   {
     id: 4,
     text: "Q4.",
-    question: "lorem ipsum is ",
-    options: ["AAAAA", "BBBBB"],
+    question: "No me ha contestado \nLos mensajes por 3 horas!",
+    options: [
+      "Le llamo. necesito saber donde esta, y que esta haciendo!",
+      "se me hace que esta muy ocupado/a, mejor hago mis cosas",
+    ],
+    selected: "",
+  },
+  {
+    id: 5,
+    text: "Q5.",
+    question: "Ya andamos 3 meses junto\npero siempre me dice ‘te quiero’!",
+    options: [
+      "No me amas? por que no me dices te amo?",
+      "No le digo nada. como quiera estoy segura que el me ama",
+    ],
+    selected: "",
+  },
+  {
+    id: 6,
+    text: "Q6.",
+    question: "Voy a regalar algo a mi novio/a !!\nQue le vas a comprar?",
+    options: [
+      "algo muy bonito y que me recuerde con esto.",
+      "algo que necesita ahorita",
+    ],
+    selected: "",
+  },
+  {
+    id: 7,
+    text: "Q7.",
+    question: "Mi novio/a esta hablando\ncon otro/a por mensajes!",
+    options: ["Quien es? Explicame ya!", "Entiendo que tiene sus amigos"],
+    selected: "",
+  },
+  {
+    id: 8,
+    text: "Q8.",
+    question:
+      "peleamos muy fuerte. Y no me habla todo el dia!\nQue tipo de persona eres?",
+    options: [
+      "Nunca le voy a mandar mensaje hasta que me pida perdon",
+      "Yo tambien tengo la culpa.. le hablo?",
+    ],
+    selected: "",
+  },
+  {
+    id: 9,
+    text: "Q9.",
+    question: "Despues de pelear,\nEn que manera estamos hablando?",
+    options: ["mensajes", "marca llamadas"],
+    selected: "",
+  },
+  {
+    id: 10,
+    text: "Q10.",
+    question: "Terminamos..",
+    options: [
+      "Borro todo las fotos y videos de el/ella",
+      "No borro nada. Quien sabe que vamos a regresar!",
+    ],
+    selected: "",
+  },
+  {
+    id: 11,
+    text: "Q11.",
+    question: "Mi ex me mando mensaje..?",
+    options: ["quien eres?", "Le contesto despu￩s de 3 horas."],
     selected: "",
   },
 ];
@@ -103,7 +168,7 @@ const Test = () => {
       ...selectedOptions,
       [questionId]: option,
     });
-    if (questionId === 4) {
+    if (questionId === 11) {
       navigate("/result");
     } else {
       slider.slickNext();
