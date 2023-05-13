@@ -5,37 +5,22 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import { useNavigate } from "react-router-dom";
 
-const Option = styled.button`
-  @media (max-width: 768px) {
-    width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-  width: 30rem;
-  height: 7rem;
-  font-size: 1.7rem;
-  color: black;
-  margin: 1rem auto 0rem auto;
-  background-color: #f8f9fa;
-  border-radius: 1.5rem;
-  border: none;
-  display: block;
-`;
-
 const Contents = styled.div`
   margin-top: 4rem;
 `;
+const QuestionWrapper = styled.div`
+  margin: 0 2rem;
+  text-aligin: left;
+`;
 const QuestionNumber = styled.h1`
-  margin-left: 1rem;
   text-align: left;
   color: #bd597a;
 `;
 
 const Question = styled.div`
   font-weight: bold;
-  margin: 2rem 0rem 0rem 1rem;
+  margin: 2rem auto 0rem auto;
   font-size: 2rem;
-  text-align: left;
 `;
 
 const BtnContainer = styled.div`
@@ -43,13 +28,13 @@ const BtnContainer = styled.div`
 `;
 const Body = styled.div`
   //너비 반응형으로 해야
-  @media (max-width: 768px) {
+  @media (max-width: 412x) {
     width: 500px;
   }
   width: 32rem;
   height: 100vh;
-  margin: auto;
-  overflow: hidden;
+  margin: auto auto;
+  overflow-y: scroll;
 `;
 
 const questions = [
@@ -193,8 +178,10 @@ const Test = () => {
       <Slider ref={(c) => setSlider(c)} {...settings}>
         {questions.map((question) => (
           <Contents key={question.id}>
-            <QuestionNumber>{question.text}</QuestionNumber>
-            <Question>{question.question}</Question>
+            <QuestionWrapper>
+              <QuestionNumber>{question.text}</QuestionNumber>
+              <Question>{question.question}</Question>
+            </QuestionWrapper>
             <BtnContainer>
               {question.options.map((option) => (
                 <Fade bottom when={question.id === slideIndex}>
