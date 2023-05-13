@@ -5,6 +5,23 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import { useNavigate } from "react-router-dom";
 
+const Option = styled.button`
+  @media (max-width: 414px) {
+    width: 412px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  width: 30rem;
+  height: 7rem;
+  font-size: 1.7rem;
+  color: black;
+  margin: 1rem auto 0rem auto;
+  background-color: #f8f9fa;
+  border-radius: 1.5rem;
+  border: none;
+  display: block;
+`;
+
 const Contents = styled.div`
   margin-top: 4rem;
 `;
