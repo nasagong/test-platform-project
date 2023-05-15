@@ -14,7 +14,7 @@ const initialState = {
 const counter = handleActions(
   {
     [INCREASE]: (state) => ({ score: state.score + 1 }),
-    [INITIALIZE]: (state) => ({ score: state.score = 0 })
+    [INITIALIZE]: (state) => ({ score: state.score = 1 })
   },
   initialState
 );

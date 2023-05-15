@@ -211,7 +211,7 @@ const Test = () => {
   const handleOptionSelect = (questionId, isScore) => {
     if (isScore) onIncrease();
     if (questionId === 11) {
-      navigate("/result");
+      navigate("/loading");
     } else {
       slider.slickNext();
     } // Move to the next slide
