@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
-import { increase } from "../module/score";
+import { increase } from "../state/module/score";
 
 const Option = styled.button`
   @media (max-width: 414px) {
@@ -189,10 +189,9 @@ const questions = [
 ];
 
 const Test = () => {
-  const scoreState = useSelector(state=>state.score);
   const dispatch = useDispatch();
   const onIncrease = () => {
-    ()=> dispatch(increase());
+    dispatch(increase());
   }
   const navigate = useNavigate();
   const [slider, setSlider] = useState(null);

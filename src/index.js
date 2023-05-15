@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 import {createStore} from 'redux';
 import score from '../src/state/module/score';
+import { Provider } from 'react-redux';
 
 const store = createStore(score);
 const root = ReactDOM.createRoot(document.getElementById('root'));
