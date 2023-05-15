@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick.css";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux';
-import { increase } from "../state/module/score";
+import { useSelector, useDispatch } from "react-redux";
+import { increase, initialize } from "../state/module/score";
 
 const Option = styled.button`
   @media (max-width: 414px) {
@@ -189,10 +189,13 @@ const questions = [
 ];
 
 const Test = () => {
+  useEffect(() => {
+    dispatch(initialize());
+  },[]);
   const dispatch = useDispatch();
   const onIncrease = () => {
     dispatch(increase());
-  }
+  };
   const navigate = useNavigate();
   const [slider, setSlider] = useState(null);
   // const [selectedOptions, setSelectedOptions] = useState({});
@@ -242,7 +245,9 @@ const Test = () => {
                   {" "}
                   {/**fade를 한블럭 밖에 둬야하지 않나 */}
                   <Option
-                    onClick={() => handleOptionSelect(question.id, option.score)}
+                    onClick={() =>
+                      handleOptionSelect(question.id, option.score)
+                    }
                   >
                     {/* Add onclick branch to last qustoin / extends map range */}
                     {option.text}

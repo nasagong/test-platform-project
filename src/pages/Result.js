@@ -1,11 +1,18 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { initialize } from '../state/module/score';
 
 const Result = () => {
-    const score = useSelector(state=>state.number);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const onClick = () => { navigate("/")}
+    const score = useSelector(state=>state.score);
     return(
         <div>
             <h1>RESULT PAGE</h1>
             <h2>{score}</h2>
+            <button onClick={onClick}>HOME</button>
         </div>
     )
 }
