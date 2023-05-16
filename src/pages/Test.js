@@ -9,9 +9,10 @@ import { increase, initialize } from "../state/module/score";
 
 const Option = styled.button`
   @media (max-width: 414px) {
-    width: 412px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: 1.5rem;
   }
   width: 30rem;
   height: 7rem;
@@ -29,7 +30,7 @@ const Contents = styled.div`
 `;
 const QuestionWrapper = styled.div`
   margin: 0 2rem;
-  text-aligin: left;
+  text-align: left;
 `;
 const QuestionNumber = styled.h1`
   text-align: left;
@@ -39,7 +40,7 @@ const QuestionNumber = styled.h1`
 const Question = styled.div`
   font-weight: bold;
   margin: 2rem auto 0rem auto;
-  font-size: 2rem;
+  font-size: 1.7rem;
 `;
 
 const BtnContainer = styled.div`
@@ -47,17 +48,14 @@ const BtnContainer = styled.div`
 `;
 const Body = styled.div`
   //너비 반응형으로 해야
-  @media (max-width: 412x) {
-    width: 500px;
+  @media (max-width: 414px) {
+    width: 25rem;
+    margin: auto auto;
   }
-  @media (max-width: 320x) {
-    overflow-y: scroll;
-  }
-  width: 32rem;
+  width: 35rem;
   height: 100vh;
   margin: auto auto;
 `;
-
 const questions = [
   // 객체 안에 필드를 추가해서 득점 로직을 짜거나, options 배열 안의 elements를 객체로 바꿔서 짜거나.. 후자가 나을듯
   {
