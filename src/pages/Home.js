@@ -1,49 +1,5 @@
-import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-
-const Body = styled.div`
-  width: 300px;
-  height: 100vh;
-  margin: auto;
-  overflow: hidden;
-  text-align: center;
-`;
-
-const Title = styled.div`
-  font-size: 3.5rem;
-  text-align: center;
-  margin-top: 3rem;
-`;
-
-const Subtitle = styled.div`
-  margin-top:2rem;
-`
-
-const Image = styled.div`
-  background-color: grey;
-  margin:3rem auto 0rem auto;
-  width:200px;
-  height:200px;
-`
-const BtnContainer = styled.div`
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const Btn = styled.button`
-  border-radius: 10rem;
-  margin-top: 2rem;
-  padding: 1rem 7rem;
-  background-color: #ED0086;
-  transition: background-color 0.5s ease-in-out;
-  color: white;
-  font-size: 1.5rem;
-  &:hover {
-    background-color: #E5A9B4;
-  }
-`;
+import * as Styled from '../styles/Home.styled'
 
 const Home = () => {
   const navigate = useNavigate();
@@ -51,14 +7,14 @@ const Home = () => {
     navigate('/test');
   }
   return (
-    <Body>
-      <Title>Title</Title>
-      <Subtitle> THIS IS TEST TEXT </Subtitle>
-      <Image>IMAGE</Image>
-      <BtnContainer>
-        <Btn onClick={onClick}>TEST</Btn>
-      </BtnContainer>
-    </Body>
+    <Styled.Body>
+      <Styled.Title>Title</Styled.Title>
+      <Styled.Subtitle> THIS IS TEST TEXT </Styled.Subtitle>
+      <Styled.Image>IMAGE</Styled.Image>
+      <Styled.BtnContainer>
+        <Styled.Btn onClick={onClick}>TEST</Styled.Btn>
+      </Styled.BtnContainer>
+    </Styled.Body>
   );
 };
 
