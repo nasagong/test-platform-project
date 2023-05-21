@@ -13,6 +13,7 @@ const Test = () => {
   useEffect(() => {
     dispatch(initialize());
   }, []);
+  const score = useSelector(state=>state.score);
   const dispatch = useDispatch();
   const onIncrease = () => {
     dispatch(increase());
@@ -32,7 +33,9 @@ const Test = () => {
   const handleOptionSelect = (questionId, isScore) => {
     if (isScore) onIncrease();
     if (questionId === 11) {
-      navigate("/result");
+      alert(score);
+      if(score>9) navigate("/error");
+      else navigate("/result");
     } else {
       slider.slickNext();
     } // Move to the next slide
@@ -46,7 +49,7 @@ const Test = () => {
     dots: false,
     arrows: false,
     infinite: false,
-    speed: 400,
+    speed: 200,
     slidesToShow: 1,
     slidesToScroll: 1,
   };

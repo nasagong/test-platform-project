@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import Test from './pages/Test'
 import Result from './pages/Result';
 import Loading from './pages/Loading';
+import Error from './pages/Error';
 
 const App = () =>{
   return(
@@ -11,6 +12,7 @@ const App = () =>{
       <Route path="/test" element={<Test/>} />
       <Route path="/result" element={<Result/>} />
       <Route path="/loading" element={<Loading/>} />
+      <Route path="/error" element={<Error />} />
     </Routes>
   );
 }
