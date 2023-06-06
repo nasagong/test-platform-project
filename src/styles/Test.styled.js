@@ -7,6 +7,8 @@ export const Option = styled.button`
     margin-right: 5vw;
     font-size: 1.5rem;
   }
+  font-family: 'Pretendard-thin';
+  font-weight: bold;
   width: 30rem;
   height: 7rem;
   font-size: 1.7rem;
@@ -33,7 +35,7 @@ export const QuestionNumber = styled.h1`
 `;
 
 export const Question = styled.div`
-  font-weight: bold;
+  font-family: 'Pretendard-regular';
   margin: 2rem auto 0rem auto;
   font-size: 1.7rem;
 `;

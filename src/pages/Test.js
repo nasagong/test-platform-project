@@ -66,7 +66,6 @@ const Test = () => {
             <Styled.BtnContainer>
               {question.options.map((option) => (
                 <Fade bottom when={question.id === slideIndex}>
-                  {" "}
                   {/**fade를 한블럭 밖에 둬야하지 않나 */}
                   <Styled.Option
                     onClick={() =>

@@ -32,7 +32,7 @@ const dogs = {
     yorkie: {
         temp: "yorkie",
         name: "Yorkshire Terrier",
-        text: "Tú eres Yorkshire terrier!-Soy muy directo. Espero que me entiendas! \n\n-Es tan difícil y agobiante tratar conmigo emocionalmente \n\n-No me gusta la gente que miente, así que necesito que seas honestos conmigo"
+        text: "-Soy muy directo. Espero que me entiendas! \n\n\n-Es tan difícil y agobiante tratar conmigo emocionalmente \n\n\n-No me gusta la gente que miente, así que necesito que seas honestos conmigo"
     },
     dacs: {
         temp: "dacs",

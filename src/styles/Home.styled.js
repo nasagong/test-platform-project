@@ -1,37 +1,44 @@
 import styled from "styled-components";
 
 export const Body = styled.div`
+  @media screen and (min-width: 500px) {
+    width:400px;
+  }
   width: 300px;
-  height: 100vh;
+  height: 100%;
   margin: auto;
   overflow: hidden;
   text-align: center;
 `;
 
 export const Title = styled.div`
-  font-size: 3.5rem;
+  font-family: 'Pretendard-regular';
+  font-size: 2.5rem;
   text-align: center;
   margin-top: 3rem;
 `;
 
 export const Subtitle = styled.div`
+  font-family: 'Pretendard-thin';
+  font-weight: 300;
+  font-size:1.5rem;
   margin-top:2rem;
 `
 
-export const Image = styled.div`
-  background-color: grey;
+export const Image = styled.img`
   margin:3rem auto 0rem auto;
   width:200px;
   height:200px;
 `
 export const BtnContainer = styled.div`
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
 export const Btn = styled.button`
+  border: none;
   border-radius: 10rem;
   margin-top: 2rem;
   padding: 1rem 7rem;

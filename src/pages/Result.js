@@ -24,6 +24,7 @@ const Body = styled.div`
   margin: auto auto;
 `;
 const Title = styled.h1`
+  font-family:'Pretendard-regular';
   display: flex;
   justify-content: center;
 `;
@@ -40,6 +41,8 @@ const Img = styled.img`
   object-fit: cover;
 `;
 const Text = styled.div`
+  font-family: 'Pretendard-thin';
+  font-weight:600;
   margin-left: 1rem;
   margin-right: 1rem;
   font-size: 1.4rem;
@@ -49,7 +52,7 @@ const Result = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoadingFinished(true);
-    }, 1500);
+    }, 3000);
 
     return () => clearTimeout(timeout); // Cleanup the timeout if the component unmounts
   }, []);
@@ -79,8 +82,6 @@ const Result = () => {
         <Img src={imageSrc.default} />
       </Image>
       <Text>{currDog.text}</Text>
-      <h2>score : {score}</h2>
-      <button onClick={onClick}>HOME</button>
     </Body>
   );
 };
