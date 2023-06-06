@@ -9,7 +9,7 @@ const Home = () => {
   return (
       <Styled.Body>
         <Styled.Title>Pup Love</Styled.Title>
-        <Styled.Subtitle> Join us in this charming exploration and uncover the paw-some secrets behind your love life! Woof-woof! </Styled.Subtitle>
+        <Styled.Subtitle> ¡Únete a nosotros en esta encantadora exploración y descubre los increíbles secretos detrás de tu vida amorosa! ¡Guau-guau! </Styled.Subtitle>
         <Styled.Image src={WelshRunning}/>
         <Styled.BtnContainer>
           <Styled.Btn onClick={onClick}>TEST</Styled.Btn>

@@ -1,7 +1,20 @@
 import poodle from "../../images/poodle.png";
 import * as Styled from "../../styles/Results.styled";
+import { useState, useEffect } from "react";
+import Loading from "../Loading";
 
 const Poodle = () => {
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoadingFinished(true);
+    }, 3000);
+
+    return () => clearTimeout(timeout); // Cleanup the timeout if the component unmounts
+  }, []);
+  const [loadingFinished, setLoadingFinished] = useState(false);
+  if (!loadingFinished) {
+    return <Loading />;
+  }
   return (
     <Styled.Container>
       <Styled.Title>
