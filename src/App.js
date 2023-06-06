@@ -5,6 +5,13 @@ import Test from './pages/Test'
 import Result from './pages/Result';
 import Loading from './pages/Loading';
 import Error from './pages/Error';
+import Welsh from './pages/results/Welsh';
+import Poodle from './pages/results/Poodle';
+import Maltese from './pages/results/Maltese';
+import Pomeranian from './pages/results/Pomeranian';
+import Bichon from './pages/results/Bichon';
+import Yorkie from './pages/results/Yorkie';
+import Dachshund from './pages/results/Dacshund';
 
 const App = () =>{
   return(
@@ -14,6 +21,13 @@ const App = () =>{
       <Route path="/result" element={<Result/>} />
       <Route path="/loading" element={<Loading/>} />
       <Route path="/error" element={<Error />} />
+      <Route path="/welsh" element={<Welsh />} />
+      <Route path="/poodle" element={<Poodle />} />
+      <Route path="/maltese" element={<Maltese />} />
+      <Route path="/pomeranian" element={<Pomeranian />} />
+      <Route path="/bichon" element={<Bichon />} />
+      <Route path="/yorkie" element={<Yorkie />} />
+      <Route path="/dacshund" element={<Dachshund />} />
     </Routes>
   );
 }

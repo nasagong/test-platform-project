@@ -8,7 +8,7 @@ const Home = () => {
   };
   return (
       <Styled.Body>
-        <Styled.Title>Pup Love:<br/> Find Your Relationship Type</Styled.Title>
+        <Styled.Title>Pup Love</Styled.Title>
         <Styled.Subtitle> Join us in this charming exploration and uncover the paw-some secrets behind your love life! Woof-woof! </Styled.Subtitle>
         <Styled.Image src={WelshRunning}/>
         <Styled.BtnContainer>

@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { increase, initialize } from "../state/module/score";
 import * as Styled from "../styles/Test.styled";
 import { questions } from "../utils/Test.questions";
+import { moveToResult } from "../utils/moveToResult";
 
 const Test = () => {
   useEffect(() => {
@@ -34,8 +35,7 @@ const Test = () => {
     if (isScore) onIncrease();
     if (questionId === 11) {
       alert(score);
-      if(score>9) navigate("/error");
-      else navigate("/result");
+      moveToResult(score,navigate)
     } else {
       slider.slickNext();
     } // Move to the next slide

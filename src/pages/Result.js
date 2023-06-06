@@ -60,10 +60,6 @@ const Result = () => {
   const score = useSelector((state) => state.score);
   const [loadingFinished, setLoadingFinished] = useState(false);
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const onClick = () => {
-    navigate("/");
-  };
   const currDog = dogOptions[score];
   const imageSrc = require(`../images/${currDog.temp}.png`);
 
