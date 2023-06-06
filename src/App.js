@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import Home from './pages/Home'
 import Test from './pages/Test'
-import Result from './pages/Result';
 import Loading from './pages/Loading';
 import Error from './pages/Error';
 import Welsh from './pages/results/Welsh';
@@ -18,7 +17,6 @@ const App = () =>{
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/test" element={<Test/>} />
-      <Route path="/result" element={<Result/>} />
       <Route path="/loading" element={<Loading/>} />
       <Route path="/error" element={<Error />} />
       <Route path="/welsh" element={<Welsh />} />
