@@ -2,19 +2,25 @@ import dacs from "../../images/dacs.png";
 import * as Styled from "../../styles/Results.styled";
 import { useState, useEffect } from "react";
 import Loading from "../Loading";
+import saveAs from "file-saver";
+import result from "../../images/dacs_result.jpg"
 
 
 const Dachshund = () => {
   const handle = () => {
     if (navigator.share) {
         navigator.share({
-            title: '기록하며 성장하기',
-            text: 'Hello World',
-            url: 'https://shinsangeun.github.io',
+            title: 'RESULT',
+            files: [
+              new File(['dacs_result.jpg'],'../../images/dacs_result.jpg',{ type: 'image/jpg'})
+            ]
         });
     }else{
         alert("공유하기가 지원되지 않는 환경 입니다.")
     }
+  }
+  const onSave = () =>{
+    saveAs(result,"dacs.png");
   }
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -47,6 +53,7 @@ const Dachshund = () => {
         </ul>
       </Styled.Description>
       <button onClick={()=>handle()}>share share share</button>
+      <button onClick={()=>onSave()}>on save</button>
       <button > Back to HOME </button>
     </Styled.Container>
   );
