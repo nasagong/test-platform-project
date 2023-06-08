@@ -2,8 +2,11 @@ import yorkie from "../../images/yorkie.png";
 import * as Styled from "../../styles/Results.styled";
 import { useState, useEffect } from "react";
 import Loading from "../Loading";
+import { shareApi } from "../../utils/utilityFunctions";
+import { useNavigate } from "react-router-dom";
 
 const Yorkie = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoadingFinished(true);
@@ -31,6 +34,10 @@ const Yorkie = () => {
           </li>
         </ul>
       </Styled.Description>
+      <Styled.BtnContainer>
+        <Styled.BackToHome onClick={()=>navigate('/test')}>RETRY</Styled.BackToHome>
+        <Styled.ShareBtn onClick={()=>shareApi()}>Share</Styled.ShareBtn>
+      </Styled.BtnContainer>
     </Styled.Container>
   );
 };

@@ -4,24 +4,12 @@ import { useState, useEffect } from "react";
 import Loading from "../Loading";
 import saveAs from "file-saver";
 import result from "../../images/dacs_result.jpg"
-
+import domtoimage from 'dom-to-image';
+import { useNavigate } from 'react-router-dom';
+import { shareApi } from "../../utils/utilityFunctions";
 
 const Dachshund = () => {
-  const handle = () => {
-    if (navigator.share) {
-        navigator.share({
-            title: 'RESULT',
-            files: [
-              new File(['dacs_result.jpg'],'../../images/dacs_result.jpg',{ type: 'image/jpg'})
-            ]
-        });
-    }else{
-        alert("공유하기가 지원되지 않는 환경 입니다.")
-    }
-  }
-  const onSave = () =>{
-    saveAs(result,"dacs.png");
-  }
+  const navigate = useNavigate();
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoadingFinished(true);
@@ -34,7 +22,7 @@ const Dachshund = () => {
     return <Loading />;
   }
   return (
-    <Styled.Container>
+    <Styled.Container className="resultPage">
       <Styled.Title>
         Tu eres <br /> Dachshund !
       </Styled.Title>
@@ -52,9 +40,10 @@ const Dachshund = () => {
           </li>
         </ul>
       </Styled.Description>
-      <button onClick={()=>handle()}>share share share</button>
-      <button onClick={()=>onSave()}>on save</button>
-      <button > Back to HOME </button>
+      <Styled.BtnContainer>
+        <Styled.BackToHome onClick={()=>navigate('/test')}>RETRY</Styled.BackToHome>
+        <Styled.ShareBtn onClick={()=>shareApi()}>Share</Styled.ShareBtn>
+      </Styled.BtnContainer>
     </Styled.Container>
   );
 };

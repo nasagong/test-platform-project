@@ -8,7 +8,7 @@ export const Option = styled.button`
     font-size: 1.5rem;
   }
   font-family: 'Pretendard-thin';
-  font-weight: bold;
+  font-weight: 800;
   width: 30rem;
   height: 7rem;
   font-size: 1.7rem;

@@ -1,11 +1,14 @@
-import retriever from "../../images/retruever.jpeg";
+import happy from "../../images/fast-cat-cat-excited.gif";
 import * as Styled from "../../styles/Results.styled";
 import { useState, useEffect } from "react";
 import Loading from "../Loading";
-import { useNavigate } from "react-router-dom";
+import saveAs from "file-saver";
+import result from "../../images/dacs_result.jpg"
+import domtoimage from 'dom-to-image';
+import { useNavigate } from 'react-router-dom';
 import { shareApi } from "../../utils/utilityFunctions";
 
-const Retriever = () => {
+const Happy = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -19,21 +22,21 @@ const Retriever = () => {
     return <Loading />;
   }
   return (
-    <Styled.Container>
+    <Styled.Container className="resultPage">
       <Styled.Title>
-        Tu eres <br /> Dachshund !
+        Tu eres <br /> Happy Cat !
       </Styled.Title>
-      <Styled.Image src={dacs} />
+      <Styled.Image src={happy} />
       <Styled.Description>
         <ul>
           <li>
-          No me gusta pelear demasiado, pero si lo haces, no pierdo. así que ten cuidado.
+          Prefiero comunicarme por llamadas en lugar de las redes sociales.
           </li>
           <li>
-          Enséñame muchas cosas!
+          Soy muy independiente, necesito que respetes mi tiempo a solas.
           </li>
           <li>
-          Es muy inconveniente para mí inventar una historia que solo yo no sé.
+          Para mí, necesitas empatizar emocionalmente en lugar de dar consejos.
           </li>
         </ul>
       </Styled.Description>
@@ -45,4 +48,4 @@ const Retriever = () => {
   );
 };
 
-export default Retriever;
+export default Happy;

@@ -6,6 +6,7 @@
   font-family: Pretendard-regular;
   src: url('./styles/fonts/Pretendard-Regular.woff');
 }
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

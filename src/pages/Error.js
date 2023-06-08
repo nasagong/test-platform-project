@@ -1,7 +1,7 @@
 const Error = () => {
     return(
         <div>
-            <h1> ERROR : DO NOT CLICK BUTTON TOO FAST</h1>
+            <h1> 404 error </h1>
         </div>
     )
 }

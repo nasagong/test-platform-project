@@ -19,10 +19,31 @@ export const Description = styled.div`
     margin-top: 3rem;
     ul {
         padding-left:0;
-        list-style-type: '💘  ';
+        list-style-type: '💘    ';
     }
     li {
         margin-top: 1rem;
         margin-left: 1rem;
     }
+`
+export const BtnContainer = styled.div`
+    width:300px;
+    display:flex;
+    flex-direction:column;
+    margin-top:3rem;
+`
+export const BackToHome = styled.button`
+    padding:1rem;
+    border:none;
+    border-radius:3rem;
+    background-color:#FA8072;
+    color: #F8F8FF;
+`
+export const ShareBtn = styled.button`
+    padding:1rem;
+    margin-top:0.5rem;
+    border:none;
+    border-radius:3rem;
+    background-color:#DC143C;
+    color: #F8F8FF;
 `

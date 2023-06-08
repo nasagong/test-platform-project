@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { increase, initialize } from "../state/module/score";
 import * as Styled from "../styles/Test.styled";
 import { questions } from "../utils/Test.questions";
-import { moveToResult } from "../utils/moveToResult";
+import { moveToResult } from "../utils/utilityFunctions";
 
 const Test = () => {
   useEffect(() => {

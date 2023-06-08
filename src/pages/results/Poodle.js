@@ -2,8 +2,11 @@ import poodle from "../../images/poodle.png";
 import * as Styled from "../../styles/Results.styled";
 import { useState, useEffect } from "react";
 import Loading from "../Loading";
+import { useNavigate } from "react-router-dom";
+import { shareApi } from "../../utils/utilityFunctions";
 
 const Poodle = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoadingFinished(true);
@@ -35,6 +38,10 @@ const Poodle = () => {
           </li>
         </ul>
       </Styled.Description>
+      <Styled.BtnContainer>
+        <Styled.BackToHome onClick={()=>navigate('/test')}>RETRY</Styled.BackToHome>
+        <Styled.ShareBtn onClick={()=>shareApi()}>Share</Styled.ShareBtn>
+      </Styled.BtnContainer>
     </Styled.Container>
   );
 };

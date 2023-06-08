@@ -13,6 +13,7 @@ export const Body = styled.div`
 
 export const Title = styled.div`
   font-family: 'Pretendard-regular';
+  font-weight: 800;
   font-size: 2.5rem;
   text-align: center;
   margin-top: 3rem;
@@ -20,7 +21,7 @@ export const Title = styled.div`
 
 export const Subtitle = styled.div`
   font-family: 'Pretendard-thin';
-  font-weight: 300;
+  font-weight: 600;
   font-size:1.5rem;
   margin-top:2rem;
 `
