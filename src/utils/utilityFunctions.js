@@ -1,7 +1,7 @@
 export function moveToResult(score, navigate) {
     switch (score) {
       case 0:
-        navigate("/happy");
+        navigate("/retriever");
         break;
       case 1:
         navigate("/welsh");

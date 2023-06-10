@@ -34,7 +34,6 @@ const Test = () => {
   const handleOptionSelect = (questionId, isScore) => {
     if (isScore) onIncrease();
     if (questionId === 11) {
-      alert(score);
       moveToResult(score,navigate)
     } else {
       slider.slickNext();

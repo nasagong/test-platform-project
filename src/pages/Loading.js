@@ -11,7 +11,7 @@ const Container = styled.div`
 `;
 
 const Loader = styled.div`
-  margin-top:50%;
+  margin-top:40vh;
   width: 40px;
   height: 40px;
   --c: linear-gradient(#ED0086 0 0);

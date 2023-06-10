@@ -3,7 +3,7 @@ export const questions = [
     {
       id: 1,
       text: "Q1.",
-      question: "primera cita!\ncomo me voy a vestir?",
+      question: "Primera cita!\ncomo me voy a vestir?",
       options: [
         { text: "Ya tengo mi outfit perfecto", score: true },
         { text: "Antes de salir, lo voy a elegir.", score: false },
@@ -13,11 +13,11 @@ export const questions = [
     {
       id: 2,
       text: "Q2.",
-      question: "mi pareja quiere salir a una fiesta!",
+      question: "Mi pareja quiere salir a una fiesta!",
       options: [
-        { text: "quien te dio el permiso? quedate en tu casa!", score: true },
+        { text: "Quien te dio el permiso? quedate en tu casa!", score: true },
         {
-          text: "diviértete, pero no olvides de avisarme cuando llegues a tu casa!",
+          text: "Diviértete, pero no olvides de avisarme cuando llegues a tu casa!",
           score: false,
         },
       ],
@@ -43,7 +43,7 @@ export const questions = [
           score: true,
         },
         {
-          text: "se me hace que esta muy ocupado/a, mejor hago mis cosas",
+          text: "Se me hace que esta muy ocupado/a, mejor hago mis cosas",
           score: false,
         },
       ],
@@ -67,8 +67,8 @@ export const questions = [
       text: "Q6.",
       question: "Voy a regalarle algo a mi pareja !!\nQue le vas a comprar?",
       options: [
-        { text: "algo muy bonito y que me recuerde con esto.", score: false },
-        { text: "algo que necesita ahorita", score: false },
+        { text: "Algo muy bonito y que me recuerde con esto.", score: false },
+        { text: "Algo que necesita ahorita", score: false },
       ],
       selected: "",
     },
@@ -101,8 +101,8 @@ export const questions = [
       text: "Q9.",
       question: "Despues de pelear,\nEn que manera estamos hablando?",
       options: [
-        { text: "mensajes", score: false },
-        { text: "llamada", score: false },
+        { text: "Mensajes", score: false },
+        { text: "Llamada", score: false },
       ],
       selected: "",
     },
@@ -121,8 +121,8 @@ export const questions = [
       text: "Q11.",
       question: "Mi ex me mando mensaje..?",
       options: [
-        { text: "quien eres?", score: true },
-        { text: "le contesto pero después de 3 horas.", score: false },
+        { text: "Quien eres?", score: true },
+        { text: "Le contesto pero después de 3 horas.", score: false },
       ],
       selected: "",
     },

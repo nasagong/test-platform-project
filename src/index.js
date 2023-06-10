@@ -11,7 +11,7 @@ import { Provider } from "react-redux";
 const store = createStore(score);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename='/proxy/3000'>
     <Provider store={store}>
       <App />
     </Provider>

@@ -11,7 +11,7 @@ import Pomeranian from './pages/results/Pomeranian';
 import Bichon from './pages/results/Bichon';
 import Yorkie from './pages/results/Yorkie';
 import Dachshund from './pages/results/Dacshund';
-import Happy from './pages/results/Happy';
+import Retriever from './pages/results/Retriever';
 
 const App = () =>{
   return(
@@ -27,7 +27,7 @@ const App = () =>{
       <Route path="/bichon" element={<Bichon />} />
       <Route path="/yorkie" element={<Yorkie />} />
       <Route path="/dacshund" element={<Dachshund />} />
-      <Route path="/happy" element={<Happy />} />      
+      <Route path="/retriever" element={<Retriever />} />      
     </Routes>
   );
 }
